@@ -1,0 +1,29 @@
+schema_version: 1
+profile_id: crop_pointnext_current
+profile_version: 1.0.0
+stage: crop
+adapter: pointnext_crop_v1
+assets:
+  checkpoint:
+    path: ../../assets/models/crop_best.pt
+    sha256: 7e124713ae409a39e83c2b859a59dafa2ed262c954c16f23f70d2306413668ff
+common:
+  base_seed: 42
+  precision: fp32
+parameters:
+  input:
+    features: [xyz]
+    normalization: centroid_max_radius
+    sampling:
+      strategy: shuffled_cover_plus_random_votes
+      num_points: 32768
+  inference:
+    extra_passes: 2
+  output_mapping:
+    face_class_index: 1
+  postprocess:
+    probability_threshold: 0.5
+    smooth_iterations: 0
+    smooth_alpha: 0.5
+    keep_largest_component: true
+    min_component_vertices: 100

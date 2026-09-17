@@ -1,0 +1,9 @@
+schema_version: 1
+plan_id: representative_validation
+sample_count_target: 300
+sampling_seed: 20260730
+stratify_by: []
+notes: >-
+  300 is only an initial candidate. Change sample_count_target for the actual
+  validation set; no pipeline code assumes a fixed validation sample count.
+

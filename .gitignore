@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+outputs/
+verification/
+*.obj
+!assets/template/0000.obj
+*.npz
+*.npy
+*.xlsx
+*.xls
+*.csv
+!assets/**/*.csv

@@ -1,0 +1,23 @@
+schema_version: 1
+asset: landmarks_9_reference.csv
+coordinate_unit: mm
+coordinate_frame: packaged_template_0000_obj
+derivation: legacy_barycentric_surface_interpolation
+source_template:
+  file_name: 0000.obj
+  sha256: 7ab30c0b51a5f2ca5276ef28d1c529923dbc725eb0b4351f8c0bc1b1ff6e3d9e
+source_barycentric_table:
+  file_name: lamdadsyval_symm.csv
+  sha256: f433b5dfec7752f4a3a0f64e98f2adc8c2ef1f7a14d3598cf77b157dfd5db3de
+  face_index_base: 0
+  interpolation_formula: lambda_2*A + lambda_1*B + lambda_0*C
+row_mapping:
+  bijian: 2
+  bigen: 1
+  bixia: 3
+  wyjzuo: 15
+  nyjzuo: 14
+  nyjyou: 9
+  wyjyou: 10
+  kouzuo: 18
+  kouyou: 13

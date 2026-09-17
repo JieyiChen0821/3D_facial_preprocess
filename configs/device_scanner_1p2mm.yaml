@@ -1,0 +1,8 @@
+schema_version: 1
+profile_id: scanner_1p2mm
+profile_version: 1.0.0
+coordinate_unit: mm
+expected_edge_length_mm: 1.2
+acquisition_device: unspecified_3d_face_scanner
+acquisition_protocol: triangle_edge_length_1p2mm
+

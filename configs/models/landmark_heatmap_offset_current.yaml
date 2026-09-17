@@ -1,0 +1,28 @@
+schema_version: 1
+profile_id: landmark_heatmap_offset_current
+profile_version: 1.0.0
+stage: landmark
+adapter: heatmap_offset_landmark_v1
+assets:
+  checkpoint:
+    path: ../../assets/models/landmark_best.pt
+    sha256: 88f3c0c23efbac8b2fcefa0c23a56e2ae1b6f82d4cc0a8e870732580445002f0
+common:
+  base_seed: 20260610
+  precision: fp32
+parameters:
+  input:
+    features: [xyz]
+    normalization: centroid_max_radius
+    sampling:
+      strategy: deterministic_random_fixed_count
+      num_points: 32768
+  inference:
+    top_k: 16
+  postprocess:
+    snap_method: nearest_mesh_vertex
+  output_mapping:
+    native_order:
+      [bijian, bigen, bixia, wyjzuo, nyjzuo, nyjyou, wyjyou, kouzuo, kouyou]
+    canonical_order:
+      [bijian, bigen, bixia, wyjzuo, nyjzuo, nyjyou, wyjyou, kouzuo, kouyou]

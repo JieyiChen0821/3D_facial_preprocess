@@ -1,0 +1,30 @@
+schema_version: 1
+profile_id: exploratory_all_24
+profile_version: 1.0.0
+metric_groups:
+  input.edge_length: record_only
+  input.degenerate_faces: record_only
+  input.duplicate_geometry: record_only
+  input.connected_components: record_only
+  input.topology: record_only
+  input.extent_density: record_only
+  input.normal_consistency: record_only
+  crop.retention: record_only
+  crop.probability: record_only
+  crop.spatial_structure: record_only
+  crop.postprocess_delta: record_only
+  landmark.prediction: record_only
+  landmark.heatmap: record_only
+  landmark.snap: record_only
+  landmark.anatomy: record_only
+  landmark.midline_symmetry: record_only
+  landmark.crop_boundary: record_only
+  registration.surface_residual: record_only
+  registration.convergence: record_only
+  registration.deformation: record_only
+  gpa.transform: record_only
+  final.geometry: record_only
+  crop.stability: record_only
+  landmark.stability: record_only
+rules: []
+

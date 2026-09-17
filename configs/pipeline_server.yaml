@@ -1,0 +1,48 @@
+schema_version: 1
+profile_id: server_landmarks_v1
+profile_version: 1.1.0
+models:
+  crop_profile: models/crop_pointnext_current.yaml
+  landmark_profile: models/landmark_heatmap_offset_current.yaml
+geometry:
+  template_obj: ../assets/template/0000.obj
+  template_obj_sha256: 7ab30c0b51a5f2ca5276ef28d1c529923dbc725eb0b4351f8c0bc1b1ff6e3d9e
+  template_landmarks: ../assets/template/landmarks_9_reference.csv
+  template_landmarks_sha256: 11f6214296b8a32728bf4c514aa8e735ba78680936aa4d23e7ceb5c64515f419
+  template_points: ../assets/template/Template.txt
+  template_points_sha256: 9bd436e4cfdace59ee14ce2b554807acec07cdf4becb22a41a10303ca0a9528d
+  refindex: ../assets/template/refindex.txt
+  refindex_sha256: aa1fcad5b276fc44384d0dee2234695884b8b8d71e9c6b5cdb37a9b25836ca60
+  expected_template_vertices: 7906
+  expected_template_faces: 15598
+phenotype_landmarks:
+  template_obj: ../assets/template/0000.obj
+  template_obj_sha256: 7ab30c0b51a5f2ca5276ef28d1c529923dbc725eb0b4351f8c0bc1b1ff6e3d9e
+  lamda_csv: ../assets/phenotype/lamda_ADNP.csv
+  lamda_csv_sha256: 0520cea9e0d1dc8e4711f15a186e23078c564fd6293f7b8a765270aabc8cd551
+  names_pp: ../assets/phenotype/landmark_names.pp
+  names_pp_sha256: 1de2c8069bd61d4afd5a19ba4bb5da07e82d8ba85dc57c0db9c3cb3bbb26d46c
+processing:
+  symmetry_enabled: false
+  texture_mode: geometry_only
+  meshmonk:
+    rigid_iterations: 150
+    rigid_use_scaling: true
+    rigid_inlier_kappa: 3.0
+    nonrigid_iterations: 200
+    nonrigid_inlier_kappa: 12.0
+    correspondences_symmetric: true
+    correspondences_num_neighbours: 3
+    correspondences_flag_threshold: 0.9
+    correspondences_equalize_push_pull: false
+    transform_sigma: 3.0
+    transform_num_viscous_iterations_start: 200
+    transform_num_viscous_iterations_end: 1
+    transform_num_elastic_iterations_start: 200
+    transform_num_elastic_iterations_end: 1
+    transform_num_neighbours: 80
+    flag_floating_boundary: true
+    flag_target_boundary: true
+    flag_target_badly_sized_triangles: true
+    triangle_size_zscore: 6.0
+    outlier_diffusion_iterations: 15
